@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'wizards', component: WizardListComponent},
   { path: 'wands', component: WandListComponent },
-  { path: 'wands:/id', component: WandDetailsComponent },
+  { path: 'wands/:id', component: WandDetailsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

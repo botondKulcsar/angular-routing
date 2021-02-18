@@ -1,1 +1,8 @@
-<p>wizard-list works!</p>
+<div>
+    <h2 class="list-content-title">Wizard list</h2>
+    <ul class="list-group list-content">
+        <li class="list-group-item" *ngFor="let wizard of wizards, let isEven = even" [ngClass]="{'list-group-item-light': isEven, 'list-group-item-dark': !isEven}">
+            {{wizard.name}} - {{wizard.house}}
+        </li>
+    </ul>
+</div>

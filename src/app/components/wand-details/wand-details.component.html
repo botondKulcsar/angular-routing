@@ -1,1 +1,16 @@
-<p>wand-details works!</p>
+<h2 class="list-content-title">Wand details</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Wood: {{wand.wood}}</th>
+            <th>Core: {{wand.core}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{wand.woodDescription}}</td>
+            <td>{{wand.coreDescription}}</td>
+        </tr>
+    </tbody>
+</table>
+<img [src]="wand.imgUrl" alt="wand">

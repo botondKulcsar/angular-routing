@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { OllivanderService } from 'src/app/services/ollivander.service';
 
 @Component({
   selector: 'app-wand-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WandListComponent implements OnInit {
 
-  constructor() { }
+  wands: Array<any>;
+
+    constructor(private wandService: OllivanderService, private router: Router) {
+        this.wands = this.wandService.wands;
+    }
 
   ngOnInit(): void {
   }
+
+  goToDetails(wandId: number) {
+    this.router.navigate(['wands', wandId]);
+}
 
 }

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WizardListComponent implements OnInit {
 
+  wizards: Array<any> = [{name: 'Harry Potter', house: 'Gryffindor'}, {name: 'Ron Weasley', house: 'Gryffindor'},
+        {name: 'Hermione Granger', house: 'Gryffindor'}, {name: 'Draco Malfoy', house: 'Slytherin'}];
+
   constructor() { }
 
   ngOnInit(): void {

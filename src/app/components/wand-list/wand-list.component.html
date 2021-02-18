@@ -1,1 +1,9 @@
-<p>wand-list works!</p>
+<div>
+    <h2 class="list-content-title">Wand list</h2>
+    <ul class="list-group list-content">
+        <li class="list-group-item" *ngFor="let wand of wands, let isEven = even" [ngClass]="{'list-group-item-dark': isEven, 'list-group-item-light': !isEven}">
+            {{wand.wood}} wand with {{wand.core}} core.
+            <button class="btn btn-outline-dark" (click)="goToDetails(wand.id)">Details</button>
+        </li>
+    </ul>
+</div>
